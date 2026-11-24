@@ -72,13 +72,13 @@ class Buku implements Produk {
     }
 }
 
-class EmailSender {
+class PengirimNotifikasi {
     void kirim(String alamat, String isi) {
         System.out.println("[EMAIL " + alamat + "] " + isi);
     }
 }
 
-class FileRiwayat {
+class PenyimpanRiwayat {
     void simpan(String baris) {
         System.out.println("[FILE riwayat.txt] " + baris);
     }
@@ -86,8 +86,8 @@ class FileRiwayat {
 
 class Toko {
     ArrayList<Buku> keranjang = new ArrayList<>();
-    EmailSender email = new EmailSender();
-    FileRiwayat riwayat = new FileRiwayat();
+    PengirimNotifikasi email = new PengirimNotifikasi();
+    PenyimpanRiwayat riwayat = new PenyimpanRiwayat();
 
     void tambah(Buku buku) {
         keranjang.add(buku);

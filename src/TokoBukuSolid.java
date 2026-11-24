@@ -20,8 +20,8 @@ public class TokoBukuSolid {
         keranjang.tambahUnduhan(buku4);
 
         StrukPrinter printer = new StrukPrinter();
-        PenyimpanRiwayat riwayat = new FileRiwayat();
-        PengirimNotifikasi notifikasi = new EmailSender();
+        PenyimpanRiwayat riwayat = new PenyimpanRiwayat();
+        PengirimNotifikasi notifikasi = new PengirimNotifikasi();
         MetodeBayar metode = new BayarEWallet();
 
         ProsesCheckout prosesCheckout = new ProsesCheckout(printer, riwayat, notifikasi);

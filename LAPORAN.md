@@ -10,20 +10,28 @@ Laporan ini menjelaskan pelanggaran kelima prinsip SOLID pada program awal `Toko
 ## 1. Single Responsibility Principle (SRP)
 
 ### a. Kode Awal yang Melanggar
+
 ```java
 class Toko {
     ArrayList<Buku> keranjang = new ArrayList<>();
-    EmailSender email = new EmailSender();
-    FileRiwayat riwayat = new FileRiwayat();
+    PengirimNotifikasi email = new PengirimNotifikasi();
+    PenyimpanRiwayat riwayat = new PenyimpanRiwayat();
 
-    void tambah(Buku buku) { ... }
-    int hitungOngkir(Buku b) { ... }
-    int hargaAkhir(Buku b) { ... }
-    String keterangan(Buku b) { ... }
-    String namaMetode(String metode) { ... }
-    int totalBayar(String metode, int totalBelanja) { ... }
-    void checkout(String pelanggan, String alamatEmail, String metode) { ... }
-    String formatRupiah(int angka) { ... }
+    void tambah(Buku buku) { ...}
+
+    int hitungOngkir(Buku b) { ...}
+
+    int hargaAkhir(Buku b) { ...}
+
+    String keterangan(Buku b) { ...}
+
+    String namaMetode(String metode) { ...}
+
+    int totalBayar(String metode, int totalBelanja) { ...}
+
+    void checkout(String pelanggan, String alamatEmail, String metode) { ...}
+
+    String formatRupiah(int angka) { ...}
 }
 ```
 
